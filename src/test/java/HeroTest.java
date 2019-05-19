@@ -57,4 +57,11 @@ public class HeroTest{
         Hero herotest = new Hero("Superman", 30, "Flight", "Kryptonite", "Wabalabadubdub");
         assertEquals(1, herotest.getId());
     }
+
+    @Test
+    public void find_returnsHeroWithSameId_secondHero(){
+        Hero firstHero = new Hero("Superman", 30, "Flight", "Kryptonite", "Wabalabadubdub");
+        Hero secondHero = new Hero("Batman", 35, "Money", "Martha", "I am Batman");
+        assertEquals(Hero.find(secondHero.getId()), secondHero);
+    }
 }
