@@ -44,5 +44,17 @@ public class HeroTest{
         assertEquals("Wabalabadubdub", heroTest.getCatchPhrase());
     }
 
+    @Test
+    public void all_returnsAllInstancesOfHero_true(){
+        Hero firstHero = new Hero("Superman", 30, "Flight", "Kryptonite", "Wabalabadubdub");
+        Hero secondHero = new Hero("Batman", 35, "Money", "Martha", "I am Batman");
+        assertEquals(true, Hero.all().contains(firstHero));
+        assertEquals(true, Hero.all().contains(secondHero));
+    }
 
+    @Test
+    public void getId_HeroInstantiatesWithId_1(){
+        Hero herotest = new Hero("Superman", 30, "Flight", "Kryptonite", "Wabalabadubdub");
+        assertEquals(1, herotest.getId());
+    }
 }
