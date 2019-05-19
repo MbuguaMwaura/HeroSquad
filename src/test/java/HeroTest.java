@@ -2,6 +2,12 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class HeroTest{
+
+    @After
+    public void teardown(){
+        Hero.clear();
+    }
+
     @Test
     public void Hero_instantiatesCorrectly_true(){
         Hero heroOne = new Hero("Superman",30,"Flight", "Kryptonite","Wabalabadubdub");
@@ -37,4 +43,6 @@ public class HeroTest{
         Hero heroTest = new Hero("Superman", 30, "Flight", "Kryptonite", "Wabalabadubdub");
         assertEquals("Wabalabadubdub", heroTest.getCatchPhrase());
     }
+
+
 }

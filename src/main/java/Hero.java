@@ -1,9 +1,13 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class Hero{
     private String mName;
     private int mAge;
     private String mPower;
     private String mWeakeness;
     private String mCatchPhrase;
+    private static List<Hero> instances = new ArrayList<Hero>();
 
     public Hero(String name, int age, String power, String weakeness, String catchPhrase){
         mName = name;
@@ -11,6 +15,7 @@ public class Hero{
         mPower = power;
         mWeakeness = weakeness;
         mCatchPhrase = catchPhrase;
+        instances.add(this);
     }
     public String getName(){
         return mName;
@@ -26,5 +31,11 @@ public class Hero{
     }
     public String getCatchPhrase(){
         return mCatchPhrase;
+    }
+    public static List<Hero> all(){
+        return instances;
+    }
+    public static void clear(){
+        instances.clear();
     }
 }
