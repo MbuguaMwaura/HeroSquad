@@ -1,11 +1,47 @@
-<h1> $squad.getName() </h1>
-<h3> $squad.getmCause() </h3>
 
-<ul>
-    #foreach($hero in $squad.getmHeroes())
-        <li> $hero.getName() </li>
-    #end
+<div class="container">
+<br><br>
+     <div class="row">
+         <div class="col-md-2"></div>
+         <div class="col-md-8 text-center">
+            <p>SQUAD NAME </p><h1>  $squad.getName() </h1>
+            <hr>
+            <p>OUR CAUSE</p><h3>  $squad.getmCause() </h3>
 
-<a href="/squads/$squad.getmId()/heroes/new">Add a new Hero</a>
+            <br><br>
+<a href="/squads/$squad.getmId()/heroes/new" class = "text-white"><button class="btn btn-primary" >Add Hero</button></a>
 
-<a href="/squads">All Squads</a>
+
+<br><br>
+
+         </div>
+
+         <div class="col-md-2"></div>
+     </div>
+
+
+                     <div class="row">
+
+                            #foreach($hero in $squad.getmHeroes())
+                              <div  class="col-md-3" >
+
+                                  <div id="mycards" class="card">
+                                      <div class="card-body text-center" >
+                                          <h5 class="card-title"><a href="/heroes/$hero.getId()">$hero.getName()</a></h5>
+                                          <hr>
+                                          <p class="card-text text-muted">Age: $hero.getAge() </p>
+                                          <p class="card-text text-muted">Power: $hero.getPower() </p>
+                                          <p class="card-text text-muted">Weakness: $hero.getWeakeness() </p>
+                                          <hr>
+                                          <p class="card-text text-muted"><em>$hero.getCatchPhrase()</em> </p>
+
+                                      </div>
+                                  </div>
+
+                              </div>
+
+                            #end
+                        </div>
+
+
+ </div>
