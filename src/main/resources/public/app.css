@@ -11,7 +11,7 @@ img{
     -webkit-filter: invert(100%);
         filter: invert(100%);
 }
-#giphy{
+.giphy{
 height: 200px;
     width: 200px;
 }
