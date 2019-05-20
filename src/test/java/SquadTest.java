@@ -25,4 +25,13 @@ public class SquadTest{
         Squad testSquad = new Squad("Suicide Squad", 6, "escape Amanda");
         assertEquals("escape Amanda", testSquad.getmCause());
     }
+
+    @Test
+    public void all_returnsAllInstancesOfSquad_true(){
+        Squad firstSquad = new Squad("Suicide Squad", 6, "escape Amanda");
+        Squad secondSquad = new Squad("Marvel", 20, "make 3 billion");
+        assertEquals(true, Squad.all().contains(firstSquad));
+        assertEquals(true, Squad.all().contains(secondSquad));
+
+    }
 }
