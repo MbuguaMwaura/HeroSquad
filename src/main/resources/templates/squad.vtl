@@ -1,4 +1,11 @@
 <h1> $squad.getName() </h1>
 <h3> $squad.getmCause() </h3>
 
+<ul>
+    #foreach($hero in $squad.getmHeroes())
+        <li> $hero.getName() </li>
+    #end
+
+<a href="/squads/$squad.getmId()/heroes/new">Add a new Hero</a>
+
 <a href="/squads">All Squads</a>
