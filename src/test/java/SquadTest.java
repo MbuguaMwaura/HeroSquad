@@ -2,6 +2,12 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class SquadTest{
+
+    @After
+    public void teardown(){
+        Squad.clear();
+    }
+
     @Test
     public void squad_instantiatesCorrectly_true(){
         Squad testSquad = new Squad("Suicide Squad",6, "escape Amanda");
