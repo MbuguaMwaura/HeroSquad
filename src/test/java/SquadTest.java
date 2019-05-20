@@ -44,5 +44,13 @@ public class SquadTest{
     public void getId_squadInstantiatesWithId_1(){
         Squad testSquad = new Squad("Suicide Squad", 6, "escape Amanda");
         assertEquals(1, testSquad.getmId());
+
+    }
+
+    @Test
+    public void find_returnsSquadQithSameId_secondSquad(){
+        Squad firstSquad = new Squad("Suicide Squad", 6, "escape Amanda");
+        Squad secondSquad = new Squad("Marvel", 20, "make 3 billion");
+        assertEquals(Squad.find(secondSquad.getmId()),secondSquad);
     }
 }
