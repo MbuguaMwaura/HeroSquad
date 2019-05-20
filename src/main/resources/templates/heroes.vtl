@@ -1,13 +1,38 @@
-<h1>Hero list!</h1>
 
 
 
-#if ($heroes)
-<ul>
-    #foreach ($hero in $heroes)
-         <li><a href= "/heroes/$hero.getId()">$hero.getName()</a></li>
-    #end
-#else
-  <p>No heroes!</p>
-#end
+<div class="container">
+<br><br>
+     <div class="row">
+         <div class="col-md-2"></div>
+         <div class="col-md-8 text-center">
 
+
+            <h1>Hero list!</h1>
+
+
+         </div>
+         <div class="col-md-2"></div>
+     </div>
+
+
+                     <div class="row">
+                             #foreach ($hero in $heroes)
+                              <div  class="col-md-4" >
+
+                                  <div id="mycards" class="card">
+                                      <div class="card-body text-center" >
+                                          <h5 class="card-title"><a href= "/heroes/$hero.getId()">$hero.getName()</a></h5>
+
+
+
+                                      </div>
+                                  </div>
+
+                              </div>
+
+                            #end
+                        </div>
+
+
+ </div>
