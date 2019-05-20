@@ -40,4 +40,9 @@ public class SquadTest{
         assertEquals(true, Squad.all().contains(secondSquad));
 
     }
+    @Test
+    public void getId_squadInstantiatesWithId_1(){
+        Squad testSquad = new Squad("Suicide Squad", 6, "escape Amanda");
+        assertEquals(1, testSquad.getmId());
+    }
 }

@@ -6,12 +6,14 @@ public class Squad{
     private int mSize;
     private String mCause;
     private static List<Squad> instances = new ArrayList<Squad>();
+    private int mId;
 
     public Squad (String name, int size, String cause){
         mName = name;
         mSize = size;
         mCause = cause;
         instances.add(this);
+        mId = instances.size();
     }
 
     public String getName(){
@@ -28,7 +30,10 @@ public class Squad{
     public static List<Squad> all(){
         return instances;
     }
-    public static void clear()
+    public static void clear(){
        instances.clear();
+    }
+    public int getmId(){
+        return mId;
     }
 }
