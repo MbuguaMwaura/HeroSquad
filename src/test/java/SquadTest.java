@@ -53,4 +53,10 @@ public class SquadTest{
         Squad secondSquad = new Squad("Marvel", 20, "make 3 billion");
         assertEquals(Squad.find(secondSquad.getmId()),secondSquad);
     }
+
+    @Test
+    public void getHeros_initiallyReturnsEmptyList_ArrayList(){
+        Squad testSquad = new Squad("Suicide Squad", 6, "escape Amanda");
+        assertEquals(0, testSquad.getmHeroes().size());
+    }
 }
