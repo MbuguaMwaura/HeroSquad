@@ -59,4 +59,11 @@ public class SquadTest{
         Squad testSquad = new Squad("Suicide Squad", 6, "escape Amanda");
         assertEquals(0, testSquad.getmHeroes().size());
     }
+    @Test
+    public void addHero_addsHeroToList_true(){
+        Squad testSquad = new Squad("Suicide Squad", 6, "escape Amanda");
+        Hero testHero = new Hero("Superman",30,"Flight", "Kryptonite","Wabalabadubdub");
+        testSquad.addHero(testHero);
+        assertEquals(true, testSquad.getmHeroes().contains(testHero));
+    }
 }
